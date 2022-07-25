@@ -1,0 +1,37 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+
+
+.navbar {
+    // position: fixed;
+    // top: 0;
+    // left: 0;
+    // width: 100%;
+
+    margin-top: 1rem;   
+    padding-left: 10rem;
+    text-decoration: none;
+    color: $priTextColor;
+    font-size: $primaryFontSize;
+    border-bottom: 5px solid #c3cbcc;   
+
+    
+
+    .d-flex{
+        inline-size: 40rem;
+        margin-left: 20rem;
+    }
+
+    .nav-item {
+        align-items: center;
+        padding-left: 30px;
+
+        svg {
+            height: 30px;
+            width: 30px;
+        }
+    }
+}
