@@ -7,6 +7,10 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ProductoComponent implements OnInit {
 
+  imageSrc = 'assets/images/anya.jpg';
+  imageAlt = 'Anya Kwayyy';
+
+
   constructor() { }
 
   ngOnInit(): void {

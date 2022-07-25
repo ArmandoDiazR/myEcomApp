@@ -1,0 +1,138 @@
+
+// body{
+//     display: flex;
+//     justify-content: center;
+//     align-content: center;
+//     min-height: 100vh;
+//     background: #dcdcdc;
+// }
+
+.container-product{
+   @include card-containers;
+
+   img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: 0.5s ease-in-out;
+    transform-origin: right;
+
+    &:hover {
+        transform: scale(1.5);
+        }   
+    }
+}
+
+
+.action{
+    position: absolute;
+    top: 8px;
+    right: 8px;
+}
+
+.action li{
+    @include displaying-flex;
+    position: relative; 
+    margin: 5px;
+    width: 40px;
+    height: 40px;
+    list-style: none;
+    background: #fff;
+    cursor: pointer;
+    transition: transform 0.5s;
+    transform: translateX(60px);
+
+    &:nth-child(2){
+        transition-delay: 0.15s;
+    }
+
+    &:nth-child(3){
+        transition-delay: 0.3s;
+    }
+
+    span{
+        position: absolute;
+        right: 50px;
+        top: 50%;
+        transform: translateY(-50%) translateX(-20px);
+        white-space: nowrap;
+        padding: 4px 6px;
+        background: #fff;
+        color: #333;
+        font-weight: 500;
+        font-size: 12px;
+        border-radius: 4px;
+        pointer-events: none;
+        opacity: 0;
+        transition: 0.5s;
+
+        &:hover{
+            background: #ff2020;
+            color: #fff;
+        }
+    }
+    
+
+}
+
+.container-product .card:hover .action li{
+    transform: translateX(0px);
+
+    &:hover{
+        background: #ff2020;
+        color: #fff;
+    }
+}
+
+.action li:hover span{
+    transform: translateY(-50%) translateX(-20px);
+    opacity: 1;
+}
+
+.action li span::before{
+    content: '';
+    position: absolute;
+    top: 50%;
+    right: -4px;
+    width: 8px;
+    height: 8px;
+    background: rgb(255, 255, 255);
+    transform: translateY(-50%) rotate(45deg);
+}
+
+.container-product .card .content{
+    padding: 10px;
+}
+
+.container-product .card .content .productName h3{
+    text-align: center;
+    font-size: 20px;
+    font-weight: 500;
+    color: rgb(144, 68, 189);
+    margin: 5px 0;
+}
+
+.container-product .card .content .priceRating{
+    display: flex;   
+    justify-content: space-between;
+    align-items: center;
+}
+
+.container-product .card .content .priceRating h2{
+    font-size: 15px;
+    color: #ff2020;
+    font-weight: 500;
+}
+
+.container-product .card .content .priceRating .fa-solid{ 
+    color: #daba2f;
+    cursor: pointer;
+}
+
+.container-product .card .content .price_rating .fa.grey{
+    color: #dcdcdc;
+    cursor: pointer;
+}
