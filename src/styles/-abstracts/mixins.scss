@@ -45,3 +45,11 @@
 nav ul {
   @include horizontal-list;
 }
+
+
+@mixin forHeaderFont{
+  color: $priTextColor;
+  font-size: 25px;
+  font-weight: bold;
+  font-family: $primaryFontFamily;
+}

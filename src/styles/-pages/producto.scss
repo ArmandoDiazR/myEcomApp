@@ -9,6 +9,7 @@
 
 .container-product{
    @include card-containers;
+   padding-top: 7rem;
 
    img{
     position: absolute;
@@ -122,17 +123,7 @@
 }
 
 .container-product .card .content .priceRating h2{
-    font-size: 15px;
+    font-size: $primaryFontSize;
     color: #ff2020;
-    font-weight: 500;
-}
-
-.container-product .card .content .priceRating .fa-solid{ 
-    color: #daba2f;
-    cursor: pointer;
-}
-
-.container-product .card .content .price_rating .fa.grey{
-    color: #dcdcdc;
-    cursor: pointer;
+    font-weight: bold;
 }
